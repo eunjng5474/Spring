@@ -50,8 +50,6 @@ public class Order {
     private List<Order> orders = new ArrayList<>();`
   - `mappedBy` : mapping된 것. 읽기 전용
 
-
-
 `@Inheritance(strategy = InheritanceType.SINGLE_TABLE)`
 
 `@DiscriminatorColumn(name = "dtype")`
@@ -76,8 +74,6 @@ public class Order {
   
   - Album - `@DiscriminatorValue("A")`
 
-
-
 - DeliveryStatus -> enum으로
   
   - Delivery에서 `@Enumerated` 추가
@@ -91,12 +87,9 @@ public class Order {
     
     - STRING으로 쓰기!
 
-
-
 - Category
 
 ```java
-
 @ManyToMany
 @JoinTable(name = "category_item",
         joinColumns = @JoinColumn(name = "category_id"),
@@ -113,8 +106,6 @@ private Category parent;
 @OneToMany(mappedBy = "parent")
 private List<Category> child = new ArrayList<>();
 ```
-
-
 
 ### 엔티티 설계시 주의점
 
@@ -164,14 +155,14 @@ private List<Order> orders = new ArrayList<>();
         order.setMember(member);
     } 
     */
-    
+
     // ->
         public void setMember(Member member) {
         this.member = member;
         member.getOrders().add(this);
     }
-    
-    
+
+
         public void addOrderItem(OrderItem orderItem) {
         orderItems.add(orderItem);
         orderItem.setOrder(this);
@@ -181,13 +172,9 @@ private List<Order> orders = new ArrayList<>();
         this.delivery = delivery;
         delivery.setOrder(this);
     }
-
-
 ```
 
 - -> 양방향일 때 원자적으로 한 코드로 세팅
-
-
 
 ## 회원 도메인 개발
 
@@ -211,3 +198,35 @@ private List<Order> orders = new ArrayList<>();
 - `RequiredArgsConstructor` : final이 붙은 필드만 생성자 만들어줌
   
   - Spring boot 사용시 MemberRepository에서도 em에 대해 사용 가능
+
+
+
+## 상품 도메인 개발
+
+- 데이터를 가지는 쪽에 비즈니스 로직을 만드는 게 응집력이 있어 좋다.
+  -> Item entity에 stockQuantity가 있기 때문에 Item에 핵심 비즈니스 로직 작성
+
+- NotEnoughStockException
+  
+  - extends RuntimeException 후 ctrl + o -> override
+
+
+
+## 주문 도메인 개발
+
+- 생성 메서드를 통해 추후 생성 부분을 수정할 때 해당 메서드만 변경하면 된다.
+  
+  - 다른 스타일의 생성을 모두 막아야 한다.
+  
+  - `protected OrderItem() {}` 추가 혹은 `@NoArgsConstructor(access = AccessLevel.PROTECTED)` annotation 추가 
+
+- OrderService
+  
+  - cascade로 인해 order만 저장해도 orderItem과 delivery가 persist된다.
+  
+  - 다른 곳에서도 참조하는 것이라면 cascade 사용 주의
+    (Order만 orderItem과 delivery를 사용하고, persist하는 life cycle이 동일하기 때문에 cascade를 사용했다.)
+
+
+
+### 주문 검색 기능 개발

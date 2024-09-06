@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=BoardWeb/src\/main\/java&lt;com.multicampus.biz.user{UserService.java[UserService" modifiers="513" timestamp="1725329794920"/>
-    <typeInfo handle="=BoardWeb/C:\/DEV\/eclipse-workspace\/BoardWeb\/src\/main\/webapp\/WEB-INF\/lib\/spring-jdbc-6.0.4.jar&lt;org.springframework.jdbc.core(RowMapper.class[RowMapper" modifiers="1537" timestamp="1725251856981"/>
-    <typeInfo handle="=BoardWeb/C:\/DEV\/eclipse-workspace\/BoardWeb\/src\/main\/webapp\/WEB-INF\/lib\/spring-webmvc-6.0.4.jar&lt;org.springframework.web.servlet.mvc(Controller.class[Controller" modifiers="1537" timestamp="1725251856985"/>
-    <typeInfo handle="=BoardWeb/C:\/DEV\/apache-tomcat-10.1.28\/lib\/servlet-api.jar=/javadoc_location=/https:\/\/jakarta.ee\/specifications\/servlet\/6.0\/apidocs\/=/=/owner.project.facets=/jst.web=/&lt;jakarta.servlet(ServletContextListener.class[ServletContextListener" modifiers="1537" timestamp="1722579284000"/>
-    <typeInfo handle="=BoardWeb/C:\/DEV\/apache-tomcat-10.1.28\/lib\/servlet-api.jar=/javadoc_location=/https:\/\/jakarta.ee\/specifications\/servlet\/6.0\/apidocs\/=/=/owner.project.facets=/jst.web=/&lt;jakarta.servlet(ServletContextAttributeListener.class[ServletContextAttributeListener" modifiers="1537" timestamp="1722579284000"/>
-</typeInfoHistroy>

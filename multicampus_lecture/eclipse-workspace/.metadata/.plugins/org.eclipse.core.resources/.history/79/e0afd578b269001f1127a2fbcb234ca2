@@ -1,9 +1,0 @@
-package com.multicampus.biz.common;
-
-public class AfterReturningAdvice {
-
-	// after-returning은 비즈니스 메소드 리턴 값을 받아서 사후처리할 수 있다. 
-	public void afterLog(Object returnObj) {
-		System.out.println("[사후 처리] 비즈니스 메소드 리턴 값 : " + returnObj.toString());
-	}
-}

@@ -1,0 +1,7 @@
+package hello;
+
+import jakarta.servlet.ServletContextListener;
+
+public class BoardListener implements ServletContextListener {
+
+}

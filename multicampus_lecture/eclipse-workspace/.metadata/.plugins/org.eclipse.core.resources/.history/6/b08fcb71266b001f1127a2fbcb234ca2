@@ -1,0 +1,21 @@
+package com.multicampus.controller.user;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.multicampus.biz.user.UserDAO;
+import com.multicampus.biz.user.UserVO;
+
+@Controller
+public class LoginController {
+
+	@RequestMapping("/login.do")
+	public String login(UserVO vo, UserDAO dao) throws Exception {
+		if(dao.getUser(vo) != null) return "getBoardList.do";
+		else return "login.jsp";
+	}
+
+}
+
+
+

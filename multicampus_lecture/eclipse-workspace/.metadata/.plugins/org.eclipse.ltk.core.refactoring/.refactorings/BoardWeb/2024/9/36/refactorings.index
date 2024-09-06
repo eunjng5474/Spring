@@ -1,0 +1,65 @@
+1725244930023	Copy compilation unit
+1725245316531	Copy package
+1725245378476	Extract interface 'TV'
+1725245843900	Copy package
+1725246309088	Copy compilation unit
+1725253518192	Copy package
+1725253546742	Delete element
+1725253557205	Copy file
+1725253559720	Delete element
+1725253577505	Move file
+1725259247994	Copy compilation unit
+1725259529669	Extract interface 'Speaker'
+1725325370410	Extract interface 'BoardService'
+1725325933316	Copy file
+1725327335039	Delete element
+1725327349137	Copy compilation unit
+1725327463364	Delete element
+1725329753880	Extract interface 'UserService'
+1725330062253	Copy compilation unit
+1725331137443	Copy compilation unit
+1725332047556	Delete element
+1725339178082	Copy compilation unit
+1725341686534	Copy compilation unit
+1725342579011	Copy compilation unit
+1725348820499	Copy compilation unit
+1725408700961	Delete element
+1725410261345	Rename type 'BoardDAO'
+1725410287101	Extract interface 'BoardDAO'
+1725416496777	Copy file
+1725416763158	Copy file
+1725417248756	Copy file
+1725417931496	Copy file
+1725418602970	Copy file
+1725424366880	Copy file
+1725424817807	Delete elements
+1725429211094	Delete elements
+1725430695582	Copy file
+1725430730398	Rename resource 'business-layer.xml'
+1725432520094	Copy compilation unit
+1725432525357	Copy compilation unit
+1725432530215	Copy compilation unit
+1725432536871	Rename type 'GertBoardController'
+1725432552356	Copy compilation unit
+1725432559415	Copy compilation unit
+1725432566241	Copy compilation unit
+1725435522936	Copy compilation unit
+1725436315056	Delete element
+1725494899108	Rename resource 'action-servlet.xml'
+1725494906093	Move 'presentation-layer.xml' to 'config'
+1725499805148	Delete elements
+1725499839190	Delete element
+1725505715833	Move 4 resources to 'jsp'
+1725511439467	Rename resource 'jsp'
+1725517211014	Delete element
+1725519441225	Copy file
+1725583316073	Copy file
+1725583321949	Copy file
+1725597897450	Copy compilation unit
+1725598629295	Copy file
+1725598872917	Copy compilation unit
+1725601715630	Copy file
+1725602221879	Copy file
+1725603239052	Copy compilation unit
+1725604531454	Copy file
+1725604674620	Copy compilation unit

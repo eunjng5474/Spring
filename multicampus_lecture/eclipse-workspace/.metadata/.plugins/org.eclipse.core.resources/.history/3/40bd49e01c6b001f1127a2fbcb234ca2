@@ -1,0 +1,36 @@
+package com.multicampus.controller.board;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
+
+import com.multicampus.biz.board.BoardDAOJdbc;
+import com.multicampus.biz.board.BoardVO;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+public class GetBoardController implements Controller {
+
+	@Override
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("글 상세 조회 처리");
+		
+		// 1. 사용자 입력정보 추출
+		String seq = request.getParameter("seq");
+		
+		// 2. DB 연동 처리
+		BoardVO vo = new BoardVO();
+		vo.setSeq(Integer.parseInt(seq));
+		
+		BoardDAOJdbc dao = new BoardDAOJdbc();
+		BoardVO board = dao.getBoard(vo);
+		
+		// 3. 화면 이동
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("board", board);
+		mav.setViewName("getBoard.jsp");
+		return mav;
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.multicampus.controller.board;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.multicampus.biz.board.BoardDAOJdbc;
+import com.multicampus.biz.board.BoardVO;
+
+@Controller
+public class InsertBoardController {
+
+	@RequestMapping("/insertBoard.do")
+	public void 내맘대로(BoardVO vo) throws Exception {
+		
+		BoardDAOJdbc dao = new BoardDAOJdbc();
+		dao.insertBoard(vo);
+	}
+
+}

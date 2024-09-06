@@ -1,0 +1,4 @@
+board.datasource.driverClass=org.h2.Driver
+board.datasource.jdbcUrl=jdbc:h2:tcp://localhost/~/test
+board.datasource.username=sa
+board.datasource.password=
